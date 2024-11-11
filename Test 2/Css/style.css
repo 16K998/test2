@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: white;
+}
+
+.info{
+    position: relative;
+    overflow: hidden;
+    border-radius: 15PX;
+    background-color: transparent;
+}
+img{
+    border-radius: 10px;
+    transition: all .7s;
+}
+.information{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.568);
+    transition: all .1S;
+    padding: 15px 10px;
+}
+.information .movieInfo{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+            line-clamp: 3;
+    -webkit-box-orient: vertical;
+    
+}
+
+.rate{
+    border: 2px solid rgb(18, 94, 18);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+input{
+    --bs-secondary-color: rgba(253, 253, 253, 0.75);
+    background-color: transparent;
+}
+.forminp{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.forminp input{
+    border-color: transparent transparent gray;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    width: 100%;
+}
+form{
+    box-sizing: border-box;
+    width: 99%;
+}
+.inputInfo{
+    width: 40%;
+}
+.sub{
+    background-color: black;
+    width: 10%;
+    border-radius: 10px;
+}
+
+.error-msg {
+    color: red;
+    display: none;
+    font-size: 17px;
+}
+
+.text-danger + .error-msg {
+    display: block;
+}
+
+.information{
+    display: none;
+}
+
+
+.info:hover .information{
+    display: block;
+}
+.info:hover img{
+    filter: blur(3px);
+    transform: scale(1.1) skew(-0.01turn, 3deg);
+}
+
+.btUp{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999999;
+}
+
+.barIcon{
+    display: flex;
+    flex-direction: column;
+}
+.iconsTwo{
+    justify-content: space-between;
+    align-items: center;
+}
+.links{
+    display: none;
+}
+li{
+    list-style: none;
+    margin: 20px 0;
+    transition: all .3s;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: rgba(245, 72, 72, 0.658);
+}
+li:hover{
+    color: rgba(245, 72, 72, 0.658);
+    cursor: pointer;
+}
+i{
+    cursor: pointer;
+}
+#btn{
+    background-color: black;
+    border: 0 transparent;
+    border-radius: 5px;
+    width: 9%;
+    padding: 10px;
+    margin:20px 0 20px 70px;
+    color: white;
+
+    position: relative;
+    transition: all .3s;
+    transition: transform 0.5s ease;  
+}
+
+.btn-move:hover {
+    transform: translateX(200px);
+  }
+
+.con{
+    margin-left: 50px;
+    padding-left: 50px;
+    font-weight: lighter;
+}
+.subButton{
+    margin-left: 30px;
+}
+@media screen and (max-width: 800px) {
+    .form{
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .sidebar{
+        background-color: transparent;
+
+    }
+    .button{
+        background-color: transparent;
+        color: white;
+        margin-left: 10px;
+        align-items: center;
+    }
+    .barIcon{
+        background-color: blue;
+        display: none;
+    }
+    .sidebar img{
+        display: none;
+    }
+    .iconsTwo{
+        justify-content: center;
+        align-items: center;
+    }
+    .forminp{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .forminp input{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .inputInfo{
+        width: 100%;
+    }
+    #btn{
+        width: 20%;
+        padding: 5px;
+        border: 0 transparent;
+        margin-bottom: 30px;
+        margin-left: 0;
+    }
+    .con{
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+}
